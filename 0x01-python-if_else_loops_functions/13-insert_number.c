@@ -1,5 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * *insert_node - inserts a number into a sorted linked list.
