@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for n in range(0, 99):
-    print(f"{n:02d}", end=', ')
+    print("{:02d}" .format(n), end=', ')
 print(99)
