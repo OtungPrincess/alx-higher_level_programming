@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-for n in reversed(range(97, 123)):
-    if(n % 2 == 0):
-        print(chr(n), end='')
-    else:
-        print(chr(n - 32), end='')
+for n in range(ord('z'), ord('a') - 1, -2):
+    print("{:c}{:s}".format(n, chr(n - 33)), end='')
