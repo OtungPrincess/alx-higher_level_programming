@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A class that defines a square and can compute area"""
+
+
 class Square:
     """A class that defines a square
     Instantiation with optional size.
