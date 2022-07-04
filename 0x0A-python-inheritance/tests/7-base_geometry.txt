@@ -1,0 +1,120 @@
+=============================
+The ``7-base_geometry`` module
+=============================
+
+Using ``BaseGeometry``
+-----------------------------
+
+First import ``BaseGeometry`` from the ``1-my_list`` module:
+
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Simple cases:
+=============================
+
+Positive integer
+-----------------------------
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+
+Error cases:
+=============================
+
+Negative integer to value
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", -12)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] my_int must be greater than 0
+
+Value == 0
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] my_int must be greater than 0
+
+Value None
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] my_int must be an integer
+
+Value float("nan")
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", float("nan"))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] my_int must be an integer
+
+Value vacue
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+Value no integer (float)
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", 3.24)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] my_int must be an integer
+
+Value no integer (boolean)
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] my_int must be an integer
+
+Value no integer (list)
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator("my_int", [1, 2])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] my_int must be an integer
+
+Name no string
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator(234, True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] 234 must be an integer
+
+Name no string and value integer greater than zero (no handle)
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.integer_validator(True, 12)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+
+using Area method
+-----------------------------
+>>> bg = BaseGeometry()
+>>> try:
+...     print(bg.area())
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[Exception] area() is not implemented
