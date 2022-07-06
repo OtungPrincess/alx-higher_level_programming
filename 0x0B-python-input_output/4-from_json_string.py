@@ -5,7 +5,7 @@
 import json
 
 
-def to_json_string(my_str):
+def from_json_string(my_str):
     """ Returns JSON representation"""
 
     return json.loads(my_str)
