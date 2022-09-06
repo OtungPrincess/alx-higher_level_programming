@@ -18,3 +18,6 @@ Files | Description
 [8-esrever.js](./8-esrever.js) | JS function that returns the reversed version of a list
 [9-logme.js](./9-logme.js) | JS function that prints the number of arguments already printed and the new argument value
 [10-converter.js](./10-converter.js) | JS function that converts a number from base 10 to another base passed as argument
+[100-map.js](./100-map.js) | a script that imports an array and computes a new array, with each value equal to the value of the initial list, multipled by the index in the list and prints both initial list and new list
+[101-sorted.js](./101-sorted.js) | a script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence
+[102-concat.js](./102-concat.js) | a script that concats 2 files
