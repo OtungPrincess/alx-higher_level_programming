@@ -23,3 +23,8 @@ Files | Description
 [13-model_state_delete_a.py](./13-model_state_delete_a.py) | Python script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa
 [model_city.py](./model_city.py) | Python file that contains the class definition of a City
 [14-model_city_fetch_by_state.py](./14-model_city_fetch_by_state.py) | Python script that prints all City objects from the database hbtn_0e_14_usa
+[relationship_city.py](./relationship_city.py) | python file that contains the class definition of cities and represents the relationship with the class city
+[relationship_state.py](./relationship_state.py) | a modification of the model_state.py file
+[100-relationship_states_cities.py](./100-relationship_states_cities.py) | Python script that creates the State “California” with the City “San Francisco” from the database hbtn_0e_100_usa
+[101-relationship_states_cities_list.py](./101-relationship_states_cities_list.py) | Python script that lists all State objects, and corresponding City objects, contained in the database hbtn_0e_101_usa
+[102-relationship_cities_states_list.py](./102-relationship_cities_states_list.py) | Python script that lists all City objects from the database hbtn_0e_101_usa
